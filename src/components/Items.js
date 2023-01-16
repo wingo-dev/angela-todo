@@ -1,11 +1,18 @@
 import React from "react";
 
 function Items(props) {
-    console.log(props.items);
+    console.log(props.done);
     return (
-        <div>
-            {props.items.map((item, index) => <li key={index}>{item}</li>)}
-        </div>
+        <div
+            onClick={() => {
+                props.onDelete(props.id);
+            }}
+            onDoubleClick={() => {
+                props.onDone(props.id);
+            }}
+        >
+            <li style={{ textDecoration: props.done.map(d => d === props.id) ? "line-through" : "" }}>{props.text}</li>
+        </div >
     )
 }
 

@@ -17,7 +17,7 @@ code {
   width: 1080px;
   height: auto;
   margin: auto;
-  padding: 5%;
+  padding: 0;
   text-align: center;
 }
 .container input{
@@ -56,6 +56,9 @@ hr{
 
 li{
   text-align: left;
-  font-size: 18px;
+  font-size: 28px;
   font-family: cursive;
+  }
+  li:hover{
+    cursor: pointer;
   }
